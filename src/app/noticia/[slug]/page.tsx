@@ -11,7 +11,7 @@ type Image = {
 export default async function Noticia({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const data = await getPostBySlug(slug);
