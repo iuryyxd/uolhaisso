@@ -103,6 +103,11 @@ export function PublishForm() {
     }
   }
 
+  function handleRemoveImage(index: number) {
+    remove(index);
+    setFiles((prev) => prev.filter((_, i) => i !== index));
+  }
+
   function handleOnSubmit(values: z.infer<typeof formSchema>) {
     const { author, description, headline, title, images: img } = values;
 
@@ -235,7 +240,7 @@ export function PublishForm() {
                           className="w-[250px] rounded-md object-cover"
                         />
                         <button
-                          onClick={() => remove(index)}
+                          onClick={() => handleRemoveImage(index)}
                           className="text-sm text-destructive"
                           type="button"
                         >
