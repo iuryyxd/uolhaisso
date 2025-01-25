@@ -23,11 +23,9 @@ export default async function Noticia({
   const images = JSON.parse(data.images) as Image[];
 
   return (
-    <main className="w-full max-w-[720px] pt-16 pb-8 mx-auto space-y-8">
+    <main className="w-full px-4 lg:px-0 lg:max-w-[720px] pt-16 pb-8 mx-auto space-y-8">
       <header className="space-y-3">
-        <h1 className="text-[2.5rem] leading-tight font-bold text-justify">
-          {data.title}
-        </h1>
+        <h1 className="text-[2.5rem] leading-tight font-bold">{data.title}</h1>
         <p className="text-sm opacity-80 text-justify">{data.description}</p>
         <div className="flex flex-col gap-1">
           <span className="text-sm">

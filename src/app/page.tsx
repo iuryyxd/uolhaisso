@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <main className="flex-1 px-4 lg:px-0">
       <h1 className="text-3xl text-center font-bold pt-8">Últimos artigos</h1>
-      <div className="w-full max-w-[820px] py-8 mx-auto flex flex-wrap gap-8">
+      <div className="w-full lg:max-w-[1024px] px-4 lg:px-0 py-8 mx-auto flex flex-wrap sm:justify-center gap-8">
         {posts.map((post) => {
           const image = JSON.parse(post.images)[0];
           if (image) {
