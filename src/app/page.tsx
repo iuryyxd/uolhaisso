@@ -1,8 +1,10 @@
+import { unstable_noStore as noStore } from "next/cache";
 import { listPosts } from "@/app/api/list-posts";
 import { Card } from "@/components";
 import Link from "next/link";
 
 export default async function Home() {
+  noStore();
   const posts = await listPosts();
 
   if (!posts) {
