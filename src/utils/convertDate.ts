@@ -1,9 +1,8 @@
-export function convertIsoToFormattedDate(date: Date): string {
-  const day = date.getDate().toString().padStart(2, "0");
-  const month = (date.getMonth() + 1).toString().padStart(2, "0");
-  const year = date.getFullYear();
-  const hours = date.getHours().toString().padStart(2, "0");
-  const minutes = date.getMinutes().toString().padStart(2, "0");
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale/pt-BR";
 
-  return `${day}/${month}/${year} ${hours}h${minutes}`;
+export function convertIsoToFormattedDate(date: Date): string {
+  return format(date, "dd/MM/yyyy HH:mm", {
+    locale: ptBR,
+  });
 }
