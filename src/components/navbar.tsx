@@ -8,7 +8,9 @@ export function Navbar() {
       <Link href="/">
         <House />
       </Link>
-      <Image src="/logo.png" alt="logo" width={80} height={20} />
+      <Link href="/">
+        <Image src="/logo.png" alt="logo" width={80} height={20} />
+      </Link>
       <Link href="/publicar">
         <Send />
       </Link>
