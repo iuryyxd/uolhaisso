@@ -237,6 +237,7 @@ export function PublishForm() {
                         <button
                           onClick={() => remove(index)}
                           className="text-sm text-destructive"
+                          type="button"
                         >
                           Remover imagem
                         </button>
