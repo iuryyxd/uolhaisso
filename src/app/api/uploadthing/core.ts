@@ -9,7 +9,7 @@ const auth = (req: Request) => ({ id: "fakeId" }); // Fake auth function
 export const ourFileRouter = {
   imageUploader: f({
     image: {
-      maxFileSize: "8MB",
+      maxFileSize: "16MB",
       maxFileCount: 15,
     },
   })

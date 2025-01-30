@@ -26,9 +26,10 @@ export function AddImageDialog({
     accept: {
       "image/*": [],
     },
+    maxSize: 16 * 1024 * 1024,
     onDropRejected: () => {
       toast({
-        title: "Arquivo inválido",
+        title: "Arquivo inválido ou maior que 16MB",
         variant: "destructive",
         duration: 2000,
       });
