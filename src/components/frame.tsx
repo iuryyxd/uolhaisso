@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AspectRatio } from "./ui/aspect-ratio";
 
 interface FrameProps {
   imageUrl: string;
@@ -9,15 +8,14 @@ interface FrameProps {
 export function Frame({ imageUrl, footer }: FrameProps) {
   return (
     <div className="space-y-2">
-      <AspectRatio ratio={16 / 9} className="bg-muted">
-        <Image
-          src={imageUrl}
-          alt={footer}
-          width={720}
-          height={405}
-          className="h-full w-full rounded-md object-cover"
-        />
-      </AspectRatio>
+      <Image
+        src={imageUrl}
+        alt={footer}
+        width={0}
+        height={0}
+        sizes="100%"
+        className="h-auto w-full md:max-w-[720px] md:h-auto rounded-md object-cover"
+      />
       <p className="text-xs opacity-80 text-justify">{footer}</p>
     </div>
   );

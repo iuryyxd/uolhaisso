@@ -19,7 +19,11 @@ export default async function Home() {
           const image = JSON.parse(post.images)[0];
           if (image) {
             return (
-              <Link href={`/noticia/${post.slug}`} key={post.id}>
+              <Link
+                href={`/noticia/${post.slug}`}
+                key={post.id}
+                className="w-full md:w-auto"
+              >
                 <Card
                   key={post.id}
                   author={post.author}
